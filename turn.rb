@@ -18,6 +18,6 @@ class Turn
       puts "#{@current_player.name}: Seriously? No!"
       @current_player.lose_life
     end
-    puts "P1: #{@player1.lives}/3 vs P@ #{@player2.lives}/3"
+    puts "P1: #{@player1.lives}/3 vs P2 #{@player2.lives}/3"
   end
 end
