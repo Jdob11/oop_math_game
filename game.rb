@@ -7,7 +7,15 @@ class Game
   end
 
   def start_game
-
+    current_turn = 1
+    until @game_over
+      puts "----- TURN #{current_turn} -----"
+      turn = Turn.new(@current_player, @player1, @player2)
+      turn.execute_turn
+      check_game_over
+      switch_turns
+      current_turn += 1
+    end
   end
 
   def switch_turns
