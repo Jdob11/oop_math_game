@@ -24,7 +24,7 @@ class Game
   end
 
   def check_game_over
-    if !@player1.is_alive? || !@player2.is_alive?
+    unless @player1.is_alive? && @player2.is_alive?
       @game_over = true
       announce_winner
     end
