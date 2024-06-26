@@ -7,6 +7,7 @@ class Game
   end
 
   def start_game
+    puts "COMMENCE MATHING NOW!"
     current_turn = 1
     until @game_over
       puts "----- TURN #{current_turn} -----"
