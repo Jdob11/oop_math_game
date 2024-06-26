@@ -11,14 +11,20 @@ class Game
   end
 
   def switch_turns
-
+    @current_player = @current_player == @player1 ? @player2 : @player1
   end
 
   def check_game_over
-
+    if !@player1.is_alive? || !@player2.is_alive?
+      @game_over = true
+      announce_winner
+    end
   end
 
   def announce_winner
-
+    winner = @player1.is_alive? ? @player1 : @player2
+    puts "#{winner.name} wins with a score of #{winner.lives}/3!"
+    puts "----- GAME OVER -----"
+    puts "Goodbye!"
   end
 end
